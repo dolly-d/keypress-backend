@@ -6,11 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+
+alphabet = ["a, s, v"]
+
 10.times do
     User.create(username: Faker::TvShows::StrangerThings.character)
 end
-
-alphabet = ["a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z"]
 
 10.times do
     Playlist.create(sequence: alphabet.sample, user_id: User.all.sample.id)
